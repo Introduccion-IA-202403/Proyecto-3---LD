@@ -1,3 +1,4 @@
+package src.main.java.com.proyecto3ld.inference;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;

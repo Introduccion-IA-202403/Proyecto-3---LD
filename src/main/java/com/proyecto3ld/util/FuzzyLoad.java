@@ -1,8 +1,12 @@
+package src.main.java.com.proyecto3ld.util;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+
+import src.main.java.com.proyecto3ld.fuzzy.FuzzySet;
+import src.main.java.com.proyecto3ld.fuzzy.LingVariable;
 
 public class FuzzyLoad {
     public static List<LingVariable> loadVariablesFromFile(String filePath) {
