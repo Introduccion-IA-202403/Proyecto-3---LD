@@ -2,6 +2,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import src.main.java.com.proyecto3ld.fuzzy.LingVariable;
+import src.main.java.com.proyecto3ld.inference.FuzzyInference;
+import src.main.java.com.proyecto3ld.inference.KnowledgeBase;
+import src.main.java.com.proyecto3ld.util.FuzzyLoad;
+
 //Clase principal que inicializa el sistema y ejecuta el proceso de inferencia
 public class Main {
     public static void main(String[] args) {

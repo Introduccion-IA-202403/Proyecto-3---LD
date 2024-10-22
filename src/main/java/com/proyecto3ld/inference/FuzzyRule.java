@@ -1,4 +1,7 @@
+package src.main.java.com.proyecto3ld.inference;
 import java.util.List;
+
+import src.main.java.com.proyecto3ld.fuzzy.FuzzyCondition;
 
 //Esta clase representa una regla difusa, que conecta entradas lingüísticas con una salida.
 

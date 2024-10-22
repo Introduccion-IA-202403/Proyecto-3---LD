@@ -1,13 +1,14 @@
+package src.main.java.com.proyecto3ld.fuzzy;
 /**
  * Esta clase representa un conjunto difuso, con una función de pertenencia
  * triangular o trapezoidal. Incluye métodos para definir y calcular la pertenencia.
  */
 public class FuzzySet {
     private String name;
-    double a; // Parámetros para las funciones de pertenencia.
+    public double a; // Parámetros para las funciones de pertenencia.
     private double b;
     private double c;
-    double d;
+    public double d;
     
     // Constructor para función triangular (tres parámetros)
     public FuzzySet(String name, double a, double b, double c) {

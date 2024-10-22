@@ -1,3 +1,4 @@
+package src.main.java.com.proyecto3ld.fuzzy;
 public class FuzzyCondition {
     private String variableName;
     private String fuzzySetName;

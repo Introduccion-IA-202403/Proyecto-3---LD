@@ -1,6 +1,10 @@
+package src.main.java.com.proyecto3ld.inference;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import src.main.java.com.proyecto3ld.fuzzy.FuzzySet;
+import src.main.java.com.proyecto3ld.fuzzy.LingVariable;
 
 //Esta clase representa el motor de inferencia difusa que procesa reglas y genera conclusiones
 public class FuzzyInference {
