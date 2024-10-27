@@ -1,0 +1,14 @@
+Temperature
+Cold 0 0 15
+Warm 10 20 30
+Hot 25 35 45
+
+Humidity
+Low 0 0 50
+Medium 30 50 70
+High 60 80 100
+
+FanSpeed
+Low 0 0 50
+Medium 25 50 75
+High 50 100 100

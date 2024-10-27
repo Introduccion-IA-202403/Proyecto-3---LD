@@ -9,6 +9,7 @@ public class FuzzySet {
     private double b;
     private double c;
     public double d;
+    private double membershipValue; // Valor de pertenencia calculado durante la fuzzificación.
     
     // Constructor para función triangular (tres parámetros)
     public FuzzySet(String name, double a, double b, double c) {
@@ -30,11 +31,25 @@ public class FuzzySet {
     
     // Método para calcular el grado de pertenencia basado en los valores
     public double calculateMembership(double x) {
-        if (x < a || x > d) return 0.0;
-        if (x >= b && x <= c) return 1.0;
-        if (x >= a && x < b) return (x - a) / (b - a);
-        if (x > c && x <= d) return (d - x) / (d - c);
-        return 0.0;
+        if (x < a || x > d) {
+            membershipValue = 0.0;
+            return membershipValue;
+        } else if (x >= b && x <= c) {
+            membershipValue = 1.0;
+            return membershipValue;
+        } else if (x >= a && x < b) {
+            membershipValue = (x - a) / (b - a);
+            return membershipValue;
+        } else if (x > c && x <= d) {
+            membershipValue = (d - x) / (d - c);
+            return membershipValue;
+        } else {
+            membershipValue = 0.0;
+            return membershipValue;
+        }
+    }
+    public double getMembershipValue() {
+        return membershipValue;
     }
     
     public String getName() {

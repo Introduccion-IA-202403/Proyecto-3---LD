@@ -55,11 +55,12 @@ public class FuzzyInference {
     private double getDegreeOfMembership(LingVariable variable, String fuzzySetName) {
         for (FuzzySet set : variable.getFuzzySets()) {
             if (set.getName().equals(fuzzySetName)) {
-                return set.calculateMembership(0); // Aquí se obtendría el valor calculado durante la fuzzificación
+                return set.getMembershipValue(); // Obtener el valor calculado durante la fuzzificación
             }
         }
         return 0.0;
     }
+
     
     // Método para realizar defuzzificación (ej. Centroide)
     private double defuzzify(Map<String, Double> ruleResults) {

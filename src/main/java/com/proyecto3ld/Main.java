@@ -12,11 +12,11 @@ import src.main.java.com.proyecto3ld.util.FuzzyLoad;
 public class Main {
     public static void main(String[] args) {
         // Cargar variables desde archivo
-        List<LingVariable> variables = FuzzyLoad.loadVariablesFromFile("src/main/resources/variables.txt");
+        List<LingVariable> variables = FuzzyLoad.loadVariablesFromFile("main/resources/variables.txt");
 
         // Crear base de conocimiento
         KnowledgeBase knowledgeBase = new KnowledgeBase();
-        knowledgeBase.loadRulesFromFile("src/main/resources/rules.txt");
+        knowledgeBase.loadRulesFromFile("main/resources/rules.txt");
         
         // Crear motor de inferencia
         FuzzyInference inference = new FuzzyInference(knowledgeBase);
