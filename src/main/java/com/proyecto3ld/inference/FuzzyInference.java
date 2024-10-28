@@ -39,6 +39,7 @@ public class FuzzyInference {
         
         // Evaluación de reglas
         for (FuzzyRule rule : knowledgeBase.getRules()) {
+            // Obtener grados de pertenencia de los conjuntos difusos de entrada
             double degree1 = getDegreeOfMembership(inputVariables.get(rule.getInput1Name()), rule.getInput1Set());
             double degree2 = getDegreeOfMembership(inputVariables.get(rule.getInput2Name()), rule.getInput2Set());
             double ruleStrength = Math.min(degree1, degree2); // Operador AND (mínimo)
@@ -53,7 +54,9 @@ public class FuzzyInference {
 
     // Obtener el grado de pertenencia de un conjunto difuso específico
     private double getDegreeOfMembership(LingVariable variable, String fuzzySetName) {
+        // Buscar el conjunto difuso por nombre y devolver su valor de pertenencia
         for (FuzzySet set : variable.getFuzzySets()) {
+            // Comparar nombres de conjuntos difusos
             if (set.getName().equals(fuzzySetName)) {
                 return set.getMembershipValue(); // Obtener el valor calculado durante la fuzzificación
             }
@@ -66,14 +69,17 @@ public class FuzzyInference {
     private double defuzzify(Map<String, Double> ruleResults) {
         double numerator = 0.0;
         double denominator = 0.0;
-        
+
+        // Iterar sobre los conjuntos difusos de la variable de salida
         for (FuzzySet set : outputVariable.getFuzzySets()) {
+            // Obtener el valor de pertenencia de la regla o 0 si no existe
             double membership = ruleResults.getOrDefault(set.getName(), 0.0);
             double representativeValue = (set.a + set.d) / 2; // Centro aproximado del conjunto difuso
+            // Calcular el numerador y denominador para el cálculo del centroide
             numerator += representativeValue * membership;
             denominator += membership;
         }
-        
+        // Evitar división por cero
         return (denominator == 0) ? 0.0 : (numerator / denominator);
     }
 }

@@ -24,7 +24,7 @@ public class FuzzyRule {
     }
     
     public FuzzyRule(List<FuzzyCondition> ruleConditions, FuzzyCondition fuzzyCondition) {
-        //TODO Auto-generated constructor stub
+
     }
 
     // Método para mostrar la regla en un formato legible

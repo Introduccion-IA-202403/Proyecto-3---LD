@@ -21,6 +21,9 @@ public class FuzzyCondition {
         return variableName + " IS " + fuzzySetName;
     }
 
+    /**
+        * Método para comparar dos condiciones difusas
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) return true;
@@ -31,6 +34,7 @@ public class FuzzyCondition {
 
     @Override
     public int hashCode() {
+        // Hash basado en los nombres de las variables y conjuntos difusos
         return variableName.hashCode() * 31 + fuzzySetName.hashCode();
     }
 }

@@ -31,6 +31,7 @@ public class FuzzySet {
     
     // Método para calcular el grado de pertenencia basado en los valores
     public double calculateMembership(double x) {
+        // Verificar si x está dentro del rango del conjunto difuso
         if (x < a || x > d) {
             membershipValue = 0.0;
             return membershipValue;
