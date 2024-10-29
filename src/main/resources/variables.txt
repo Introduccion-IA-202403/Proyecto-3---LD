@@ -1,14 +1,14 @@
-Temperature
-Cold 0 0 15
-Warm 10 20 30
-Hot 25 35 45
+WaitTime
+Low 0 15 30
+Medium 25 30 45
+High 30 45 60
 
-Humidity
-Low 0 0 50
+Quality
+Low 0 15 35
 Medium 30 50 70
-High 60 80 100
+High 50 70 100
 
-FanSpeed
-Low 0 0 50
-Medium 25 50 75
-High 50 100 100
+Tip
+Low 0 15 35
+Medium 30 50 70
+High 50 70 100

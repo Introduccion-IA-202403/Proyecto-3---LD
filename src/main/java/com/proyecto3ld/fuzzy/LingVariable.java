@@ -19,7 +19,7 @@ public class LingVariable {
     
     // Método para calcular los grados de pertenencia de todos los conjuntos para un valor real (fuzzificación)
     public void fuzzify(double value) {
-        System.out.println("Fuzificación para la variable: " + name);
+        System.out.println("Fuzificación para la variable: " + name + " Con el valor " + value);
         for (FuzzySet set : fuzzySets) {
             double membership = set.calculateMembership(value);
             System.out.println("Grado de pertenencia en " + set.getName() + ": " + membership);

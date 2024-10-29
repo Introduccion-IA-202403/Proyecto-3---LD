@@ -74,12 +74,13 @@ public class FuzzyInference {
         for (FuzzySet set : outputVariable.getFuzzySets()) {
             // Obtener el valor de pertenencia de la regla o 0 si no existe
             double membership = ruleResults.getOrDefault(set.getName(), 0.0);
-            double representativeValue = (set.a + set.d) / 2; // Centro aproximado del conjunto difuso
+            double representativeValue = (set.a + set.d) / 2.0; // Centro aproximado del conjunto difuso
             // Calcular el numerador y denominador para el cálculo del centroide
             numerator += representativeValue * membership;
             denominator += membership;
         }
         // Evitar división por cero
-        return (denominator == 0) ? 0.0 : (numerator / denominator);
+        // System.out.println("Division por cero? " +  (denominator == 0.0));
+        return (denominator == 0.0) ? 0.0 : (numerator / denominator);
     }
 }

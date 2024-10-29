@@ -1,3 +1,9 @@
-IF Temperature IS Cold AND Humidity IS Low THEN FanSpeed IS Low
-IF Temperature IS Warm AND Humidity IS Medium THEN FanSpeed IS Medium
-IF Temperature IS Hot AND Humidity IS High THEN FanSpeed IS High
+IF WaitTime IS High AND Quality IS Low THEN Tip IS Low
+IF WaitTime IS Medium AND Quality IS Medium THEN Tip IS Medium
+IF WaitTime IS Low AND Quality IS High THEN Tip IS High
+IF WaitTime IS High AND Quality IS High THEN Tip IS Medium
+IF WaitTime IS Low AND Quality IS Low THEN Tip IS Medium
+IF WaitTime IS Low AND Quality IS Medium THEN Tip IS Medium
+IF WaitTime IS High AND Quality IS Medium THEN Tip IS Medium
+IF WaitTime IS Medium AND Quality IS Low THEN Tip IS Medium
+IF WaitTime IS Medium AND Quality IS High THEN Tip IS Medium
